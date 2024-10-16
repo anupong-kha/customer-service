@@ -13,7 +13,7 @@ public class CustomUserDetailsService implements UserDetailsService {
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         if ("user".equals(username)) {
-            return new User("user", "{noop}password", Collections.emptyList()); // Use {noop} for plain text password for testing
+            return new User("user", "{noop}password", Collections.emptyList());
         }
         throw new UsernameNotFoundException("User not found");
     }

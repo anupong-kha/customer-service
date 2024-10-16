@@ -62,20 +62,6 @@ To run the project, use the following Gradle commands:
 ./gradlew bootRun
 ```
 
-The application will be available at `http://localhost:8080`.
-
-### 4. H2 Database Console
-
-Access the H2 in-memory database at:
-```
-http://localhost:8080/h2-console
-```
-
-Default credentials:
-- **JDBC URL**: `jdbc:h2:mem:testdb`
-- **Username**: `sa`
-- **Password**: `password`
-
 ---
 
 ## API Documentation
@@ -95,12 +81,9 @@ The following endpoints are available:
   ```
 
   **Response**:
-  ```json
-  {
-    "token": "your-jwt-token"
-  }
   ```
-
+    Token : "Field Authorization in Header"
+  ```
 ### Customer Management (Secured)
 
 You need to pass the JWT token in the `Authorization` header for the secured customer endpoints.
