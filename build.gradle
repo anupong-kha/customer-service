@@ -27,11 +27,15 @@ dependencies {
 	// H2 Database for in-memory DB
 	implementation 'com.h2database:h2'
 
-	// Spring Security for JWT Authentication
+	// Spring Security for authentication and authorization
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 
-	// JWT Dependency for Token-based Authentication
-	implementation 'io.jsonwebtoken:jjwt:0.9.1'
+	// JWT library for generating and validating JWT tokens
+	implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
+	runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.5'
+	runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.11.5' // for JSON parsing
+
+	implementation 'jakarta.validation:jakarta.validation-api:3.0.2'
 
 	// Lombok for reducing boilerplate code
 	compileOnly 'org.projectlombok:lombok:1.18.30'

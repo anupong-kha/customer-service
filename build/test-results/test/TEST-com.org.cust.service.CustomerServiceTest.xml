@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.org.cust.service.CustomerServiceTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-10-16T00:22:22" hostname="TXM096861A" time="0.176">
-  <properties/>
-  <testcase name="testGetCustomerById()" classname="com.org.cust.service.CustomerServiceTest" time="0.167"/>
-  <testcase name="testCreateCustomer()" classname="com.org.cust.service.CustomerServiceTest" time="0.008"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

@@ -1,6 +1,7 @@
 package com.org.cust.service;
 
 import com.org.cust.model.db.CustomerEntity;
+import com.org.cust.model.request.CustomerRequest;
 import com.org.cust.repository.CustomerRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -41,13 +42,16 @@ class CustomerServiceTest {
 
     @Test
     void testCreateCustomer() {
-        CustomerEntity customer = new CustomerEntity();
+        CustomerRequest customer = new CustomerRequest();
         customer.setName("John Doe");
 
-        when(customerRepository.save(customer)).thenReturn(customer);
+        CustomerEntity customerEntity = new CustomerEntity();
+        customerEntity.setName("John Doe");
+
+        when(customerRepository.save(customerEntity)).thenReturn(customerEntity);
 
         CustomerEntity createdCustomer = customerService.createCustomer(customer);
         assertEquals("John Doe", createdCustomer.getName());
-        verify(customerRepository, times(1)).save(customer);
+        verify(customerRepository, times(1)).save(customerEntity);
     }
 }
