@@ -13,6 +13,6 @@ import java.util.Base64;
 public class JwtConfig {
 
     @Value("${jwt.secret}")
-    private String jwtSecret; // This will be loaded from application.properties or environment variable
+    private String jwtSecret;
 
 }
